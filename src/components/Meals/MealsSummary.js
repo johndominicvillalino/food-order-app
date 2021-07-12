@@ -3,14 +3,12 @@ import classes from './MealsSummary.module.css'
 const MealsSummary = () => {
 
     return   <section className={classes.summary}>
-    <h2>Delicious Food, Delivered To You</h2>
+    <h2>Pungko Pungko sa Cebu</h2>
     <p>
-      Choose your favorite meal from our broad selection of available meals
-      and enjoy a delicious lunch or dinner at home.
+     Pili na sa lamian nga pungko pungko. Makasakit nis atong kalawasan pero ngano d ay lami man sad.
     </p>
     <p>
-      All our meals are cooked with high-quality ingredients, just-in-time and
-      of course by experienced chefs!
+      Ako nang e online ang pungko pungko ron kay daghan dli mamayad ug tarong! Pito ka puso nya duha ray bayran. Pwe!
     </p>
   </section>
 
