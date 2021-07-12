@@ -19,7 +19,7 @@ const HeaderCartButton = props => {
         <CartIcon />
         </span>
         <span>
-            Your Cart
+            Bayronon!
         </span>
         <span className={classes.badge}>
             {numberofCartItems}

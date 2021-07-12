@@ -9,7 +9,7 @@ import classes from './Cart.module.css'
 const Cart = props => {
 
     const cartContext = useContext(CartContext)
-    const totalAmount = `$${cartContext.totalAmount.toFixed(2)}`
+    const totalAmount = `₱${cartContext.totalAmount.toFixed(2)}`
     const hastItems = cartContext.length > 0;
 
     const cartItemRemoveHandler = id => {};
