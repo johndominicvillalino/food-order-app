@@ -14,7 +14,7 @@ const Cart = props => {
     const hastItems = cartContext.length > 0;
 
     const cartItemRemoveHandler = (id) => {
-        
+
         cartContext.remoteItem(id)
     };
 
@@ -38,7 +38,7 @@ const Cart = props => {
     <Modal onClose={props.onClose}>
         {cartItems}
         <div className={classes.total}>
-            <span> Total Amount </span>
+            <span> Bayronon</span>
             <span>{totalAmount}</span>
         </div>
         <div className={classes.actions}>

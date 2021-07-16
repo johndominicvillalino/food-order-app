@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 
 import CartIcon from '../Cart/CartIcon'
@@ -10,13 +10,39 @@ const HeaderCartButton = props => {
 
     const cartCtx = useContext(CardContext)
 
-    const numberofCartItems = cartCtx.items.reduce((curNumder,item) => {
+    const { items } = cartCtx;
+    const [isBtnIsHighLighted, setBtnIsHighlighted] = useState(false)
+
+
+    useEffect(() => {
+
+        if (items.length === 0) {
+            return;
+        }
+
+        setBtnIsHighlighted(true)
+
+        const timer = setTimeout(() => {
+
+            setBtnIsHighlighted(false)
+
+        }, 300)
+
+        return () => {
+            clearTimeout(timer)
+        }
+
+    },[items])
+
+    const btnClasses = `${classes.button} ${isBtnIsHighLighted ? classes.bump : ''}`
+
+    const numberofCartItems = cartCtx.items.reduce((curNumder, item) => {
         return curNumder + item.amount;
     }, 0);
 
-    return <button onClick={props.onClick} className={classes.button}>
-        <span className={classes.icon}>
-        <CartIcon />
+    return <button onClick={props.onClick} className={btnClasses}>
+        <span className={classes.btnClasses}>
+            <CartIcon />
         </span>
         <span>
             Bayronon!
