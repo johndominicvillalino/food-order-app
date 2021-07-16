@@ -9,12 +9,16 @@ import classes from './Cart.module.css'
 const Cart = props => {
 
     const cartContext = useContext(CartContext)
+
     const totalAmount = `₱${cartContext.totalAmount.toFixed(2)}`
     const hastItems = cartContext.length > 0;
 
     const cartItemRemoveHandler = id => {};
 
-    const cartItemAddHandler = item => {};
+    const cartItemAddHandler = item => {
+
+        cartContext.addItem(item)
+    };
 
     const cartItems = (<ul className={classes['cart-items']}>{cartContext.items.map(item => {
         return <CartItem 
