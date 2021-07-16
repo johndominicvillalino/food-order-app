@@ -13,9 +13,12 @@ const Cart = props => {
     const totalAmount = `₱${cartContext.totalAmount.toFixed(2)}`
     const hastItems = cartContext.length > 0;
 
-    const cartItemRemoveHandler = id => {};
+    const cartItemRemoveHandler = (id) => {
+        
+        cartContext.remoteItem(id)
+    };
 
-    const cartItemAddHandler = item => {
+    const cartItemAddHandler = (item) => {
 
         cartContext.addItem(item)
     };
